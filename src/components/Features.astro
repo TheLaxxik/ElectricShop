@@ -1,0 +1,61 @@
+---
+const steps = [
+	{
+		num: '01',
+		title: 'Analýza a stratégia',
+		description:
+			'Prejdeme si vaše predstavy a navrhneme optimálnu štruktúru webu pre váš biznis.',
+	},
+	{
+		num: '02',
+		title: 'Rýchly vývoj',
+		description:
+			'Vďaka Astro a Tailwindu kódujeme bleskovo a vy vidíte priebežné výsledky naživo.',
+	},
+	{
+		num: '03',
+		title: 'Nasadenie a údržba',
+		description:
+			'Web spustíme na bleskovom hostingu a postaráme sa o to, aby bežal bez výpadkov.',
+	},
+];
+---
+
+<section
+	class="border-t border-slate-100 bg-white py-20 dark:border-neutral-800 dark:bg-black"
+	aria-labelledby="features-heading"
+>
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="mb-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-accent-warm">Dodanie</p>
+			<h2
+				id="features-heading"
+				class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white"
+			>
+				Rýchly štart bez zbytočného čakania
+			</h2>
+		</div>
+
+		<ol class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8" role="list">
+			{
+				steps.map((step) => (
+					<li class="h-full">
+						<article
+							class="flex h-full flex-col items-center rounded-2xl border border-slate-100 bg-white px-6 py-10 text-center dark:border-neutral-800 dark:bg-black"
+						>
+							<span class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-100 bg-slate-50 text-sm font-bold tabular-nums text-blue-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-accent-warm">
+								{step.num}
+							</span>
+							<h3 class="mt-6 text-lg font-bold tracking-tight text-slate-900 dark:text-white sm:text-xl">
+								{step.title}
+							</h3>
+							<p class="mt-3 text-base leading-relaxed text-slate-600 dark:text-neutral-400">
+								{step.description}
+							</p>
+						</article>
+					</li>
+				))
+			}
+		</ol>
+	</div>
+</section>

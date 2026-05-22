@@ -1,17 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Features from '../components/Features.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Domov | Esticode">
-  <Navbar />
-  
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h1 class="text-center text-4xl font-bold text-blue-600 mt-20">
-      Master Template funguje!
-    </h1>
-    <p class="text-center text-slate-600 mt-4">
-      Navbar hore je plne responzívny. Skús si zúžiť okno prehliadača.
-    </p>
-  </main>
+	<Navbar />
+	<Hero />
+	<Services />
+	<Features />
+	<Footer />
 </Layout>
