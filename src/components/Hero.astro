@@ -1,6 +1,11 @@
 ---
+import { sanityClient } from "sanity:client";
+
 const primaryCta = { href: '/kontakt', label: 'Nezáväzná ponuka' };
 const secondaryCta = { href: '/sluzby', label: 'Naše projekty' };
+
+// Vytiahneme prvý dokument typu 'hero' z cloudu
+const hero = await sanityClient.fetch(`*[_type == "hero"][0]`);
 ---
 
 <section class="py-12 sm:py-20" aria-labelledby="hero-heading">
@@ -10,18 +15,17 @@ const secondaryCta = { href: '/sluzby', label: 'Naše projekty' };
 				id="hero-heading"
 				class="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
 			>
-				Tvoríme weby, ktoré <span class="text-blue-600 dark:text-accent-warm">zarábajú</span>. Rýchlo a moderne.
+				{hero?.title || "Tvoríme weby, ktoré zarábajú. Rýchlo a moderne."}
 			</h1>
 			<p class="max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-neutral-400">
-				Sme experti na moderné a bleskurýchle weby — od prvého návrhu po nasadenie.
-				Staviame na overených technológiách, aby váš biznis rástol bez kompromisov.
+				{hero?.subtitle || "Sme experti na moderné a bleskurýchle weby — od prvého návrhu po nasadenie. Staviame na overených technológiách, aby váš biznis rástol bez kompromisov."}
 			</p>
 			<div class="flex flex-wrap items-center gap-4">
 				<a
 					href={primaryCta.href}
 					class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-all duration-200 ease-out hover:bg-blue-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-white dark:text-black dark:shadow-none dark:hover:bg-neutral-100 dark:hover:shadow-none dark:focus-visible:outline-white"
 				>
-					{primaryCta.label}
+					{hero?.ctaText || primaryCta.label}
 				</a>
 				<a
 					href={secondaryCta.href}

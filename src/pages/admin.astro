@@ -1,0 +1,39 @@
+---
+// src/pages/admin.astro
+import { schemaTypes } from '../sanity/schema';
+---
+
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esticode Admin | Sanity Studio</title>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <div id="sanity"></div>
+
+    <script>
+      import { renderStudio } from 'sanity';
+      import { defineConfig } from 'sanity';
+      import { structureTool } from 'sanity/structure';
+      import { schemaTypes } from '../sanity/schema';
+
+      const config = defineConfig({
+        projectId: 'jh80nfpn',
+        dataset: 'production',
+        title: 'Esticode Master Admin',
+        basePath: '/admin',
+        plugins: [structureTool()],
+        schema: {
+          types: schemaTypes,
+        },
+      });
+
+      const target = document.getElementById('sanity');
+      if (target) {
+        renderStudio(target, config);
+      }
+    </script>
+  </body>
+</html>
