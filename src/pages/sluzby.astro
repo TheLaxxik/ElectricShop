@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Services from '../components/Services.astro';
+import Features from '../components/Features.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Služby | Esticode">
+	<Navbar />
+	<PageHero
+		eyebrow="Služby"
+		title="Weby na mieru pre váš biznis"
+		description="Vyberte si balík, ktorý sedí vašim cieľom — od jednoduchej landing page až po kompletný firemný web alebo priebežnú údržbu."
+		align="center"
+	/>
+	<Services showHeader={false} />
+	<Features />
+	<Footer />
+</Layout>

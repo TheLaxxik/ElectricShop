@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+const email = 'kontakt@esticode.sk';
+
+const highlights = [
+	{ label: 'Odpoveď', value: 'do 24 hodín' },
+	{ label: 'Formulár', value: 'nie je potrebný' },
+	{ label: 'Konzultácia', value: 'nezáväzná' },
+];
+---
+
+<Layout title="Kontakt | Esticode">
+	<Navbar />
+	<PageHero
+		eyebrow="Kontakt"
+		title="Ozvite sa nám"
+		description="Máte nápad na nový web alebo potrebujete upraviť existujúci? Napíšte nám — odpovedáme do 24 hodín."
+		align="center"
+	>
+		<a
+			href={`mailto:${email}`}
+			class="mt-10 inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 ease-out hover:bg-blue-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-white dark:text-black dark:shadow-none dark:hover:bg-neutral-100 dark:focus-visible:outline-white"
+		>
+			{email}
+		</a>
+		<p class="mt-8 text-sm text-slate-500 dark:text-neutral-500">
+			Preferujeme e-mail — bez zbytočných formulárov a rýchlo sa dohodneme na ďalší krok.
+		</p>
+	</PageHero>
+
+	<section class="border-t border-slate-100 py-12 dark:border-neutral-800 sm:py-16">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<ul class="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6" role="list">
+				{
+					highlights.map((item) => (
+						<li>
+							<div
+								class="rounded-2xl border border-slate-100 bg-white px-5 py-6 text-center dark:border-neutral-800 dark:bg-black"
+							>
+								<p class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-neutral-500">
+									{item.label}
+								</p>
+								<p class="mt-2 text-base font-semibold text-slate-900 dark:text-white">{item.value}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>
