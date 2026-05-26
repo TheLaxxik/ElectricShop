@@ -1,61 +1,61 @@
 ---
-const steps = [
+const features = [
 	{
-		num: '01',
-		title: 'Analýza a stratégia',
-		description:
-			'Prejdeme si vaše predstavy a navrhneme optimálnu štruktúru webu pre váš biznis.',
+		title: '15+ rokov skúseností',
+		description: 'Letá praktikavania v elektrotechnike s certifikáciami podľa STN a EU noriem.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5-15a9 9 0 11-18 0 9 9 0 0118 0z" />`,
 	},
 	{
-		num: '02',
-		title: 'Rýchly vývoj',
-		description:
-			'Vďaka Astro a Tailwindu kódujeme bleskovo a vy vidíte priebežné výsledky naživo.',
+		title: 'Rýchly príjazd',
+		description: 'Príjazd do 30 minút v Košiciach. Odborná diagnostika na mieste bez skrytých poplatkov.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />`,
 	},
 	{
-		num: '03',
-		title: 'Nasadenie a údržba',
-		description:
-			'Web spustíme na bleskovom hostingu a postaráme sa o to, aby bežal bez výpadkov.',
+		title: 'Záručný servis',
+		description: 'Všetky práce s 24-mesačnou zárukou. Bezplatná oprava počas záručnej doby.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m7.538-4a2.534 2.534 0 00-7.86 0c-.115.582-.223 1.31-.223 2.016C4.5 12 3 13.5 3 15.5S4.5 19 6.5 19c.748 0 1.45-.184 2.064-.52M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+	},
+	{
+		title: 'Kvalitné materiály',
+		description: 'Používame len certifikované elektromaterialy od overených výrobcov s dlhou životnosťou.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375M12 9.75v.266V6.375" />`,
+	},
+	{
+		title: 'Profesionálny prístup',
+		description: 'Čistá práca, ochrana majetku počas inštalácie, detailná dokumentácia a revízne správy.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+	},
+	{
+		title: 'Dostupné ceny',
+		description: 'Konkurenčné ceny bez skrytých nákladov. Bezplatný odhad pred začatím prác.',
+		icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
 	},
 ];
 ---
 
-<section
-	class="border-t border-slate-100 bg-white py-20 dark:border-neutral-800 dark:bg-black"
-	aria-labelledby="features-heading"
->
+<section class="py-12 sm:py-20" aria-labelledby="features-heading">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<div class="mx-auto max-w-3xl text-center">
-			<p class="mb-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-accent-warm">Dodanie</p>
-			<h2
-				id="features-heading"
-				class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white"
-			>
-				Rýchly štart bez zbytočného čakania
+		<div class="mx-auto max-w-2xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-widest text-yellow-500">Prečo Elektro Novák</p>
+			<h2 id="features-heading" class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+				Čo nás odlišuje
 			</h2>
 		</div>
 
-		<ol class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8" role="list">
-			{
-				steps.map((step) => (
-					<li class="h-full">
-						<article
-							class="flex h-full flex-col items-center rounded-2xl border border-slate-100 bg-white px-6 py-10 text-center dark:border-neutral-800 dark:bg-black"
-						>
-							<span class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-100 bg-slate-50 text-sm font-bold tabular-nums text-blue-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-accent-warm">
-								{step.num}
-							</span>
-							<h3 class="mt-6 text-lg font-bold tracking-tight text-slate-900 dark:text-white sm:text-xl">
-								{step.title}
-							</h3>
-							<p class="mt-3 text-base leading-relaxed text-slate-600 dark:text-neutral-400">
-								{step.description}
-							</p>
-						</article>
-					</li>
-				))
-			}
-		</ol>
+		<div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{features.map((feature) => (
+				<article class="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+					<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-100 text-yellow-600 dark:bg-yellow-500/10 dark:text-yellow-400">
+						<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+							<Fragment set:html={feature.icon} />
+						</svg>
+					</div>
+					<div class="flex flex-col gap-2">
+						<h3 class="text-lg font-semibold text-slate-900 dark:text-white">{feature.title}</h3>
+						<p class="text-sm leading-relaxed text-slate-600 dark:text-neutral-400">{feature.description}</p>
+					</div>
+				</article>
+			))}
+		</div>
 	</div>
 </section>
