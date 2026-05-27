@@ -1,6 +1,6 @@
-# Esticode — Astro Master Template
+# Elektro Novák — Esticode Template
 
-Minimalistická šablóna webu pre agentúru Esticode (Astro 6 + Tailwind CSS 4). Obsahuje responzívny navbar, tmavý režim, domovskú stránku a podstránky O nás, Služby a Kontakt.
+Web pre elektrikára Elektro Novák (Astro 6 + Tailwind CSS 4). Obsahuje responzívny navbar, tmavý režim (predvolený), domovskú stránku a podstránky O nás, Služby a Kontakt.
 
 ## Čo potrebuješ pred inštaláciou
 
