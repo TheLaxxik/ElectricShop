@@ -5,6 +5,7 @@ import sanity from '@sanity/astro';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://electricshop.esticode.sk',
   vite: {
     plugins: [tailwindcss()]
   },
