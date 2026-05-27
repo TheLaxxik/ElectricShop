@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 
-const email = 'kontakt@esticode.sk';
+const email = 'kontakt@elektronovak.sk';
 
 const highlights = [
 	{ label: 'Odpoveď', value: 'do 24 hodín' },
@@ -13,17 +13,17 @@ const highlights = [
 ];
 ---
 
-<Layout title="Kontakt | Esticode">
+<Layout title="Kontakt | Elektro Novák">
 	<Navbar />
 	<PageHero
 		eyebrow="Kontakt"
 		title="Ozvite sa nám"
-		description="Máte nápad na nový web alebo potrebujete upraviť existujúci? Napíšte nám — odpovedáme do 24 hodín."
+		description="Potrebujete opraviť poruchu, spraviť revíziu alebo elektroinštaláciu? Napíšte nám — odpovedáme do 24 hodín."
 		align="center"
 	>
 		<a
 			href={`mailto:${email}`}
-			class="mt-10 inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 ease-out hover:bg-blue-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-white dark:text-black dark:shadow-none dark:hover:bg-neutral-100 dark:focus-visible:outline-white"
+			class="mt-10 inline-flex items-center justify-center rounded-lg bg-yellow-500 px-8 py-3.5 text-base font-semibold text-black shadow-sm transition-all duration-200 ease-out hover:bg-yellow-400 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
 		>
 			{email}
 		</a>
