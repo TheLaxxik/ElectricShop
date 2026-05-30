@@ -6,3 +6,44 @@
 	--color-page-dark: #0a0a0a;
 	--color-accent-warm: #c9b896;
 }
+
+/* Small responsive helpers */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Mobile menu + hamburger animations */
+:root{
+	--menu-open-duration: 420ms;
+	--menu-close-duration: 320ms;
+	--menu-ease: cubic-bezier(.16,1,.3,1);
+}
+#mobile-menu {
+	transform-origin: top;
+	transform: scaleY(0.98) translateY(-6px);
+	opacity: 0;
+	overflow: hidden;
+	will-change: transform, opacity;
+	transition: transform var(--menu-open-duration) var(--menu-ease), opacity calc(var(--menu-open-duration) / 1.6) ease;
+}
+#mobile-menu.open {
+	transform: scaleY(1) translateY(0);
+	opacity: 1;
+}
+#mobile-menu.closing {
+	transition-duration: var(--menu-close-duration);
+}
+
+/* Hamburger morph */
+.bar {
+	transition: transform 260ms var(--menu-ease), opacity 180ms ease;
+	transform-origin: center;
+}
+.bar.top { transform-origin: left center; }
+.bar.bottom { transform-origin: left center; }
+#nav-hamburger .bar.mid { opacity: 1; }
+#nav-toggle.open #nav-hamburger .bar.top { transform: translateY(6px) rotate(45deg); }
+#nav-toggle.open #nav-hamburger .bar.mid { opacity: 0; transform: scaleX(0.2); }
+#nav-toggle.open #nav-hamburger .bar.bottom { transform: translateY(-6px) rotate(-45deg); }

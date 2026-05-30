@@ -5,28 +5,28 @@ const secondaryCta = { href: '/sluzby', label: 'Naše služby' };
 
 <section class="py-12 sm:py-20" aria-labelledby="hero-heading">
 	<div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-		<div class="flex flex-col gap-6 lg:gap-8">
-			<div class="inline-flex w-fit items-center gap-2 rounded-full bg-yellow-100 px-4 py-1.5 text-sm font-semibold text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-400">
+		<div class="flex flex-col gap-6 lg:gap-8 text-center lg:text-left">
+			<div class="inline-flex w-fit items-center gap-2 rounded-full bg-yellow-100 px-4 py-1.5 text-sm font-semibold text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-400 mx-auto sm:mx-0">
 				<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
 				</svg>
 				Certifikovaný elektrikár – Košice a okolie
 			</div>
-			<h1 id="hero-heading" class="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
+			<h1 id="hero-heading" class="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
 				Elektroinštalácie, ktorým môžete dôverovať.
 			</h1>
-			<p class="max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-neutral-400">
+			<p class="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-neutral-400">
 				Vykonávame komplexné elektroinštalačné práce pre rodinné domy, byty aj firmy. Rýchly príjazd, čistá práca a záručný servis.
 			</p>
-			<div class="flex flex-wrap items-center gap-4">
-				<a href={primaryCta.href} class="inline-flex items-center justify-center rounded-lg bg-yellow-500 px-6 py-3 text-base font-semibold text-black shadow-sm transition-all duration-200 hover:bg-yellow-400 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500">
+			<div class="flex flex-wrap items-center gap-4 justify-center sm:justify-start">
+				<a href={primaryCta.href} class="inline-flex items-center justify-center rounded-lg bg-yellow-500 px-4 py-2 text-base font-semibold text-black shadow-sm transition-all duration-200 hover:bg-yellow-400 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 sm:px-6 sm:py-3">
 					{primaryCta.label}
 				</a>
-				<a href={secondaryCta.href} class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-slate-100 px-6 py-3 text-base font-semibold text-slate-700 transition-all duration-200 hover:border-slate-300 hover:bg-slate-200 dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800">
+				<a href={secondaryCta.href} class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-slate-100 px-4 py-2 text-base font-semibold text-slate-700 transition-all duration-200 hover:border-slate-300 hover:bg-slate-200 dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 sm:px-6 sm:py-3">
 					{secondaryCta.label}
 				</a>
 			</div>
-			<div class="flex flex-wrap gap-6 pt-2">
+			<div class="flex flex-wrap gap-6 pt-2 justify-center sm:justify-start">
 				<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-neutral-400">
 					<svg class="h-5 w-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
